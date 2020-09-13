@@ -8,7 +8,11 @@
     <title>Home</title>
 </head>
     <body>
-        <h1 th:text="${welcomeMessage}">Hello, homepage!</h1>
+        <h1
+                th:each="msg: ${greetings}"
+                th:text="${msg}"
+                th:unless="${msg.contains('good-bye')}"
+        >Hello, homepage!</h1>
         <h2>This is my first app using SpringBoot!</h2>
     </body>
 </html>

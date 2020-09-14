@@ -1,7 +1,7 @@
 package com.example.mvc_basics.controller;
 
 import com.example.mvc_basics.MessageForm;
-import com.example.mvc_basics.MessageListService.MessageListService;
+import com.example.mvc_basics.service.MessageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class HomeController {
 
-    private MessageListService messageListService;
+    private MessageService messageListService;
 
-    public HomeController(MessageListService messageListService) {
+    public HomeController(MessageService messageListService) {
         this.messageListService = messageListService;
     }
 
